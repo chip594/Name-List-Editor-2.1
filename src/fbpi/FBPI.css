@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('Roboto-Bold.ttf');
+}
+.root {
+    -fx-background-color: transparent;
+    -fx-font-family: "Roboto-Bold";
+}
+.menu-bar {
+    -fx-background-color: linear-gradient(#a1b56c, #206b32);
+    -fx-background-image: url("companylogo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-height: 100;
+}
+.menu:hover, .menu:focused, .menu:showing {
+    -fx-background-color: #afafaf;
+}
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: #afafaf;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
+    -fx-padding: 0.083333em 0.083333em 0.083333em 0.083333em;
+}
+.menu-item, .menu-item:focused, .menu-item:hover, .menu-item:showing {
+    -fx-background-color: #afafaf;
+}
+.tab-pane, .tab-header-area, .tab-header-background {
+    -fx-background-color: #828282;
+    -fx-border-color: transparent;
+}
+.tab {
+    -fx-background-radius: 10px 30px 10px 30px;
+    -fx-background-color: #afafaf;
+    -fx-focus-color: transparent;
+}
+.tab:hover, .button:hover {
+    -fx-background-color: #6695b4;
+}
+.tab:selected, .button:focused {
+    -fx-background-color: #e6e6e6;
+}
+.tool-bar {
+    -fx-background-color: linear-gradient(#97cbec, #363673);
+    -fx-pref-height: 50;
+}
+.button {
+    -fx-background-radius: 10px 30px 10px 30px;
+    -fx-background-color: #afafaf;
+    -fx-font-weight: bold;
+}
+.check-box, .label, .tab {
+    -fx-font-weight: bold;
+}
+.text-area-label{
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-background-color: #afafaf;
+}
+.text-area {
+    -fx-font-size: 12;
+    -fx-font-weight: 600;
+}
+.bottom-bar {
+    -fx-text-fill: Black;
+    -fx-background-color: #afafaf;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
