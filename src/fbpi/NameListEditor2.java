@@ -36,7 +36,7 @@ public class NameListEditor2 extends Application {
     TextArea leftTextArea, rightTextArea, bottomBarDisplay;
     TextField badgerModeTextField;
     String originalList, rightContents, line1, line2, line3, line4, line5, line6;
-    CheckBox capsBox1, capsBox2, capsBox3, capsBox4, capsBox5, capsBox6, mixCountTabs;
+    CheckBox capsBox1, capsBox2, capsBox3, capsBox4, capsBox5, capsBox6;
 
     public static void main(String[] args) { launch(args);}
 
@@ -113,7 +113,6 @@ public class NameListEditor2 extends Application {
         tab2.setClosable(false);
         //Creates Tab 2's Tool Bar
         ToolBar tab2ToolBar = new ToolBar();
-        mixCountTabs = new CheckBox("Multi Tab Count");
         //Creates the Tabby Tab's Buttons & assigns their action
         Button twoLinerButton = new Button("2 Liner");
         twoLinerButton.setOnAction(e -> twoLinerTab());
@@ -128,7 +127,7 @@ public class NameListEditor2 extends Application {
         Button blankTabTitleButton = new Button("Blank Tab Title");
         blankTabTitleButton.setOnAction(e -> twoLinerFirstBlank());
         //Adds the buttons to the Tabby Tab Tool Bar
-        tab2ToolBar.getItems().addAll(mixCountTabs, verticalSeparatorTab1, twoLinerButton, threeLinerButton, fourLinerButton, fiveLinerButton, sixLinerButton, verticalSeparatorTab2, blankTabTitleButton);
+        tab2ToolBar.getItems().addAll(twoLinerButton, threeLinerButton, fourLinerButton, fiveLinerButton, sixLinerButton, verticalSeparatorTab2, blankTabTitleButton);
         tab2.setContent(tab2ToolBar);
 
         //Create Fix Case Tab
@@ -581,54 +580,6 @@ public class NameListEditor2 extends Application {
         catch (Exception e) {
             errorMessage();
         }
-    }
-
-    public void insertBlankLine (CheckBox blankBox1, CheckBox blankBox2, CheckBox blankBox3, CheckBox blankBox4, CheckBox blankBox5, CheckBox blankBox6) {
-        String originalLine;
-        String blankLine = "  ";
-        String contents = rightTextArea.getText();
-        String[] contentsToSplit = contents.split("\\t");
-        if (blankBox1.isSelected()) {
-            originalLine = line1;
-            line6 = line5;
-            line5 = line4;
-            line4 = line3;
-            line3 = line2;
-            line2 = line1;
-            line1 = blankLine;
-
-            //line1 = "   " + "\t" + originalLine;
-
-        }
-        if (blankBox2.isSelected()) {
-            originalLine = line2;
-            line2 = "   " + "\t" + originalLine;
-        }
-        if (blankBox3.isSelected()) {
-            originalLine = line3;
-            line3 = "   " + "\t" + originalLine;
-        }
-        if (blankBox4.isSelected()) {
-            originalLine = line4;
-            line4 = "   " + "\t" + originalLine;
-        }
-        if (blankBox5.isSelected()) {
-            originalLine = line5;
-            line5 = "   " + "\t" + originalLine;
-        }
-        if (blankBox6.isSelected()) {
-            originalLine = line6;
-            line6 = "   " + "\t" + originalLine;
-        }
-
-
-        try {
-
-        }
-        catch (Exception e) {
-            errorMessage();
-        }
-
     }
 }
 
