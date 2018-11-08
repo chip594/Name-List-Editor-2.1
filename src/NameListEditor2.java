@@ -1,5 +1,3 @@
-package fbpi;
-
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.scene.Scene;
@@ -28,7 +26,7 @@ public class NameListEditor2 extends Application {
     Image icon;
 
     public NameListEditor2() {
-        icon = new Image(NameListEditor2.class.getResource("icon.png").toExternalForm());
+        icon = new Image(NameListEditor2.class.getResource("/images/icon.png").toExternalForm());
     }
 
     Stage stage;
@@ -222,7 +220,7 @@ public class NameListEditor2 extends Application {
         aboutStage.setTitle("About Window HTML");
         aboutStage.setScene(aboutScene);
         aboutPane.getChildren().add(browser);
-        URL url = getClass().getResource("about.html");
+        URL url = getClass().getResource("/docs/about.html");
         browser.getEngine().load(url.toExternalForm());
         aboutStage.show();
     }

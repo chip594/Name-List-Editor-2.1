@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Roboto-Bold';
-    src: url('Roboto-Bold.ttf');
+    src: url('/fonts/Roboto-Bold.ttf');
 }
 .root {
     -fx-background-color: transparent;
@@ -8,7 +8,7 @@
 }
 .menu-bar {
     -fx-background-color: linear-gradient(#a1b56c, #206b32);
-    -fx-background-image: url("companylogo.png");
+    -fx-background-image: url("/images/companylogo.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-pref-height: 100;
